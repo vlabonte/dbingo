@@ -1,32 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-l="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Deployment Survival Bingo</title>
+<title>Privacy Policy · Politique de confidentialité</title>
 <style>
 :root { --navy:#1E2D40; --cream:#F5F0E8; --rust:#B85C38; --gold:#D4A843; }
 * { box-sizing:border-box; margin:0; padding:0; }
 body { font-family:-apple-system,'Helvetica Neue',Segoe UI,sans-serif; background:var(--cream); color:var(--navy); line-height:1.65; }
-header { background:var(--navy); color:var(--cream); padding:2.2rem 1.5rem; text-align:center; border-bottom:4px solid var(--rust); }
+header { background:var(--navy); color:var(--cream); padding:2rem 1.5rem 1.4rem; text-align:center; border-bottom:4px solid var(--rust); }
 header h1 { font-size:1.6rem; letter-spacing:.12em; text-transform:uppercase; }
 header p { color:var(--gold); letter-spacing:.2em; font-size:.75rem; text-transform:uppercase; margin-top:.4rem; }
+.langs { margin-top:1rem; }
+.lbtn { background:transparent; border:1px solid var(--gold); color:var(--gold); font-size:.75rem; letter-spacing:.1em; padding:.3rem .9rem; cursor:pointer; }
+.lbtn:first-child { border-radius:4px 0 0 4px; }
+.lbtn:last-child { border-radius:0 4px 4px 0; }
+.lbtn.on { background:var(--gold); color:var(--navy); font-weight:700; }
 main { max-width:720px; margin:0 auto; padding:2rem 1.5rem 4rem; }
 h2 { font-size:1.15rem; margin:2rem 0 .6rem; letter-spacing:.02em; border-bottom:2px solid var(--rust); padding-bottom:.3rem; }
 h3 { font-size:1rem; margin:1.4rem 0 .4rem; }
 p, li { margin-bottom:.7rem; font-size:.95rem; }
 ul { padding-left:1.2rem; }
 a { color:var(--rust); }
-.tag { display:inline-block; background:var(--gold); color:var(--navy); font-size:.7rem; font-weight:700; letter-spacing:.15em; padding:.15rem .6rem; border-radius:3px; margin:1.8rem 0 .2rem; text-transform:uppercase; }
 nav { text-align:center; padding:1rem; background:rgba(30,45,64,.06); font-size:.85rem; }
 nav a { margin:0 .8rem; }
 footer { text-align:center; font-size:.75rem; color:rgba(30,45,64,.5); padding:2rem 1rem; }
+html[data-l="en"] [data-lang="fr"] { display:none; }
+html[data-l="fr"] [data-lang="en"] { display:none; }
 </style>
 </head>
 <body>
-<header><h1>Deployment Survival Bingo</h1><p>Bingo déployé · Home Front Edition</p></header>
-<nav><a href="/dbingo/">Home</a><a href="/dbingo/privacy/">Privacy · Confidentialité</a><a href="/dbingo/support/">Support · Soutien</a></nav>
+<header>
+<h1><span data-lang="en">Deployment Survival Bingo</span><span data-lang="fr">Bingo de survie au déploiement</span></h1>
+<p><span data-lang="en">Bingo déployé · Home Front Edition</span><span data-lang="fr">D-Bingo · Édition front à la maison</span></p>
+<div class="langs"><button class="lbtn" data-l="en" onclick="setLang('en')">English</button><button class="lbtn" data-l="fr" onclick="setLang('fr')">Français</button></div>
+</header>
+<nav>
+<span data-lang="en"><a href="/dbingo/">Home</a><a href="/dbingo/privacy/">Privacy</a><a href="/dbingo/support/">Support</a></span>
+<span data-lang="fr"><a href="/dbingo/">Accueil</a><a href="/dbingo/privacy/">Confidentialité</a><a href="/dbingo/support/">Soutien</a></span>
+</nav>
 <main>
+<div data-lang="en">
 <h2>Privacy Policy</h2>
 <p><em>Effective date: July 25, 2026</em></p>
 <p>Deployment Survival Bingo (“the app”) is built by Vincent Labonté. The short version: your data is yours. The app has no servers, no accounts, no ads, no analytics, and no tracking. The developer cannot see anything you put in the app.</p>
@@ -48,15 +62,44 @@ footer { text-align:center; font-size:.75rem; color:rgba(30,45,64,.5); padding:2
 <p>If this policy changes, the new version will be posted at this address with a new effective date.</p>
 <h3>Contact</h3>
 <p><a href="mailto:v.labonte@me.com">v.labonte@me.com</a></p>
-<span class="tag">Français</span>
+</div>
+<div data-lang="fr">
 <h2>Politique de confidentialité</h2>
 <p><em>Date d'entrée en vigueur : 25 juillet 2026</em></p>
-<p>Bingo déployé n'a ni serveur, ni compte, ni publicité, ni analytique, ni suivi. Le développeur ne peut rien voir de ce que vous mettez dans l'app.</p>
-<p>Vos cartes, messages, photos, dates et entrées du classeur de référence sont stockés sur votre appareil et dans votre base iCloud privée personnelle. Le partage donne accès uniquement à la personne que vous invitez, et vous pouvez le révoquer en tout temps. Rien n'est jamais public.</p>
-<p>La position sert uniquement, au moment même, à chercher des entrepreneurs à proximité dans Plans; elle n'est jamais conservée ni transmise au développeur. Les photos et contacts passent par les sélecteurs du système. Les cases suggérées par l'IA sont générées sur l'appareil. Les notifications passent par le service d'Apple et le développeur ne peut pas les lire.</p>
-<p>L'app est classée 4+ et ne collecte de données de personne, enfants compris. Toute modification de cette politique sera publiée à cette adresse.</p>
-<p>Questions : <a href="mailto:v.labonte@me.com">v.labonte@me.com</a></p>
+<p>Bingo de survie au déploiement (« l'app ») est créée par Vincent Labonté. En résumé : vos données vous appartiennent. L'app n'a ni serveur, ni compte, ni publicité, ni analytique, ni suivi. Le développeur ne peut rien voir de ce que vous mettez dans l'app.</p>
+<h3>Ce que l'app conserve</h3>
+<p>Vos cartes de bingo, les notes et messages des cases, les photos que vous joignez, les dates du compteur de jours, les entrées du classeur de référence (contacts, notes de comptes, systèmes de la maison) et vos réglages. Le tout est conservé sur votre appareil et, si vous êtes connecté à iCloud, dans votre base de données iCloud privée personnelle afin que vos données se synchronisent entre vos appareils.</p>
+<h3>Partage</h3>
+<p>Si vous invitez quelqu'un à votre carte, le partage CloudKit d'Apple donne à cette seule personne accès au contenu partagé (cartes, fils de discussion des cases, photos et classeur de référence). Vous pouvez révoquer l'accès en tout temps depuis la feuille de partage. Rien n'est jamais public.</p>
+<h3>Position</h3>
+<p>Si vous utilisez le chercheur d'entrepreneurs à proximité, l'app demande la permission de localisation et utilise votre position uniquement pour lancer une recherche dans Plans à ce moment précis. Votre position n'est jamais conservée par l'app ni transmise au développeur.</p>
+<h3>Photos et contacts</h3>
+<p>L'ajout d'une preuve photo ou l'importation d'un contact passe par les sélecteurs du système d'Apple. Seul l'élément que vous choisissez entre dans l'app, et il reste dans vos données.</p>
+<h3>Notifications</h3>
+<p>Si vous autorisez les notifications, les alertes entre vous et la personne invitée sont livrées par le service de notifications poussées d'Apple. Le développeur ne peut pas les lire.</p>
+<h3>Fonctions d'IA</h3>
+<p>Les cases suggérées sont générées sur votre appareil avec les modèles embarqués d'Apple. Vos demandes et vos cartes ne sont pas transmises au développeur.</p>
+<h3>Enfants</h3>
+<p>L'app est classée 4+ et ne collecte de données de personne, enfants compris.</p>
+<h3>Modifications</h3>
+<p>Si cette politique change, la nouvelle version sera publiée à cette adresse avec une nouvelle date d'entrée en vigueur.</p>
+<h3>Contact</h3>
+<p><a href="mailto:v.labonte@me.com">v.labonte@me.com</a></p>
+</div>
 </main>
 <footer>© 2026 Vincent Labonté</footer>
+<script>
+function setLang(l){
+  document.documentElement.setAttribute('data-l', l);
+  document.documentElement.setAttribute('lang', l);
+  try { localStorage.setItem('dbingo-lang', l); } catch(e) {}
+  document.querySelectorAll('.lbtn').forEach(function(b){ b.classList.toggle('on', b.dataset.l === l); });
+}
+(function(){
+  var saved;
+  try { saved = localStorage.getItem('dbingo-lang'); } catch(e) {}
+  setLang(saved || (((navigator.language||'en').toLowerCase().indexOf('fr')===0) ? 'fr' : 'en'));
+})();
+</script>
 </body>
 </html>

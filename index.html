@@ -1,39 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-l="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Deployment Survival Bingo</title>
+<title>Deployment Survival Bingo · Bingo de survie au déploiement</title>
 <style>
 :root { --navy:#1E2D40; --cream:#F5F0E8; --rust:#B85C38; --gold:#D4A843; }
 * { box-sizing:border-box; margin:0; padding:0; }
 body { font-family:-apple-system,'Helvetica Neue',Segoe UI,sans-serif; background:var(--cream); color:var(--navy); line-height:1.65; }
-header { background:var(--navy); color:var(--cream); padding:2.2rem 1.5rem; text-align:center; border-bottom:4px solid var(--rust); }
+header { background:var(--navy); color:var(--cream); padding:2rem 1.5rem 1.4rem; text-align:center; border-bottom:4px solid var(--rust); }
 header h1 { font-size:1.6rem; letter-spacing:.12em; text-transform:uppercase; }
 header p { color:var(--gold); letter-spacing:.2em; font-size:.75rem; text-transform:uppercase; margin-top:.4rem; }
+.langs { margin-top:1rem; }
+.lbtn { background:transparent; border:1px solid var(--gold); color:var(--gold); font-size:.75rem; letter-spacing:.1em; padding:.3rem .9rem; cursor:pointer; }
+.lbtn:first-child { border-radius:4px 0 0 4px; }
+.lbtn:last-child { border-radius:0 4px 4px 0; }
+.lbtn.on { background:var(--gold); color:var(--navy); font-weight:700; }
 main { max-width:720px; margin:0 auto; padding:2rem 1.5rem 4rem; }
 h2 { font-size:1.15rem; margin:2rem 0 .6rem; letter-spacing:.02em; border-bottom:2px solid var(--rust); padding-bottom:.3rem; }
 h3 { font-size:1rem; margin:1.4rem 0 .4rem; }
 p, li { margin-bottom:.7rem; font-size:.95rem; }
 ul { padding-left:1.2rem; }
 a { color:var(--rust); }
-.tag { display:inline-block; background:var(--gold); color:var(--navy); font-size:.7rem; font-weight:700; letter-spacing:.15em; padding:.15rem .6rem; border-radius:3px; margin:1.8rem 0 .2rem; text-transform:uppercase; }
 nav { text-align:center; padding:1rem; background:rgba(30,45,64,.06); font-size:.85rem; }
 nav a { margin:0 .8rem; }
 footer { text-align:center; font-size:.75rem; color:rgba(30,45,64,.5); padding:2rem 1rem; }
+html[data-l="en"] [data-lang="fr"] { display:none; }
+html[data-l="fr"] [data-lang="en"] { display:none; }
 </style>
 </head>
 <body>
-<header><h1>Deployment Survival Bingo</h1><p>Bingo déployé · Home Front Edition</p></header>
-<nav><a href="/dbingo/">Home</a><a href="/dbingo/privacy/">Privacy · Confidentialité</a><a href="/dbingo/support/">Support · Soutien</a></nav>
+<header>
+<h1><span data-lang="en">Deployment Survival Bingo</span><span data-lang="fr">Bingo de survie au déploiement</span></h1>
+<p><span data-lang="en">Bingo déployé · Home Front Edition</span><span data-lang="fr">D-Bingo · Édition front à la maison</span></p>
+<div class="langs"><button class="lbtn" data-l="en" onclick="setLang('en')">English</button><button class="lbtn" data-l="fr" onclick="setLang('fr')">Français</button></div>
+</header>
+<nav>
+<span data-lang="en"><a href="/dbingo/">Home</a><a href="/dbingo/privacy/">Privacy</a><a href="/dbingo/support/">Support</a></span>
+<span data-lang="fr"><a href="/dbingo/">Accueil</a><a href="/dbingo/privacy/">Confidentialité</a><a href="/dbingo/support/">Soutien</a></span>
+</nav>
 <main>
+<div data-lang="en">
 <h2>The deployment survival bingo card for military families</h2>
 <p>Mark a square when chaos strikes on the home front (or down range). Five in a row is BINGO. Shared live with your person through iCloud — private, bilingual, and just serious enough about the unserious parts of deployment life.</p>
+<ul>
+<li>A live board shared with exactly one invited person — messages, reactions, and photo proof on every square</li>
+<li>Day counter with home screen and lock screen widgets</li>
+<li>Nine visual themes, from field-manual classic to Maple Leaf</li>
+<li>Home-front and deployed modes, each with its own board packs</li>
+<li>No accounts, no ads, no tracking — your data lives in your own iCloud</li>
+</ul>
 <p><a href="/dbingo/privacy/">Privacy policy</a> · <a href="/dbingo/support/">Support</a></p>
-<span class="tag">Français</span>
-<p>La carte de bingo de survie au déploiement pour les familles militaires. Cochez une case quand le chaos frappe; cinq en ligne, c'est BINGO. Partagée en direct via iCloud — privée et bilingue.</p>
+</div>
+<div data-lang="fr">
+<h2>La carte de bingo de survie au déploiement pour les familles militaires</h2>
+<p>Cochez une case quand le chaos frappe au front à la maison (ou en mission). Cinq en ligne, c'est BINGO. Partagée en direct avec votre personne via iCloud — privée, bilingue, et juste assez sérieuse à propos des côtés pas sérieux du déploiement.</p>
+<ul>
+<li>Une carte partagée en direct avec une seule personne invitée — messages, réactions et preuves photo sur chaque case</li>
+<li>Compteur de jours avec widgets d'écran d'accueil et d'écran verrouillé</li>
+<li>Neuf thèmes visuels, du manuel de campagne classique à La feuille d'érable</li>
+<li>Modes front à la maison et en mission, chacun avec ses propres cartes</li>
+<li>Pas de compte, pas de pub, pas de suivi — vos données vivent dans votre propre iCloud</li>
+</ul>
 <p><a href="/dbingo/privacy/">Politique de confidentialité</a> · <a href="/dbingo/support/">Soutien</a></p>
+</div>
 </main>
 <footer>© 2026 Vincent Labonté</footer>
+<script>
+function setLang(l){
+  document.documentElement.setAttribute('data-l', l);
+  document.documentElement.setAttribute('lang', l);
+  try { localStorage.setItem('dbingo-lang', l); } catch(e) {}
+  document.querySelectorAll('.lbtn').forEach(function(b){ b.classList.toggle('on', b.dataset.l === l); });
+}
+(function(){
+  var saved;
+  try { saved = localStorage.getItem('dbingo-lang'); } catch(e) {}
+  setLang(saved || (((navigator.language||'en').toLowerCase().indexOf('fr')===0) ? 'fr' : 'en'));
+})();
+</script>
 </body>
 </html>
